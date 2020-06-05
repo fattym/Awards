@@ -2,20 +2,20 @@
 {% load bootstrap3 %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="w3-container-fluid w3-theme-l5">
+<div class="w3-container-fluid w3-light-grey">
     <div class="w3-row">
         <div class="col-md-5">
-            <img src="https://images.pexels.com/photos/260024/pexels-photo-260024.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                style="width:auto; height:650px;">
+
         </div>
         <br>
         <br>
-        <div class="col-md-7" style="padding-left: 14%">
+        <div class="col-md-7" style="padding-right: 14%">
             {% if form.errors %}
             <p> Some Information Might be Incorrect </p>
             {% endif %}
+        
             <div class="panel panel-default w3-card">
-                <div class="panel-heading w3-theme-d5">
+                <div class="panel-heading w3-theme-d3">
                     <h3 class="text-center">Sign Up</h3>
                 </div>
                 <div class="panel-body ">
@@ -23,7 +23,7 @@
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="form-group">
-                            <input type="submit" class="w3-button w3-theme-d5" value="Sign Up">
+                            <input type="submit" class="w3-button w3-theme-d4" value="Sign Up">
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="next" value="{{next}}">
