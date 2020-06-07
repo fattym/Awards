@@ -20,6 +20,14 @@
     h6 {
         font-family: "Raleway", sans-serif
     }
+    .content {
+        position: fixed;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 10px;
+      }
 </style>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -31,7 +39,7 @@
                 title="close menu">
                 <i class="fa fa-remove"></i>
             </a>
-         
+            <img  src="https://bit.ly/2XCoIeN" width="50" style="border-radius:50%;">
 
             <p class="w3-text-grey w3-center"> Logged in as <a id='muli' style='font-size: 18px;'
                     href="{%url 'profile'%}"><span id='spaner'>{{user.username}}</span></a></p>
