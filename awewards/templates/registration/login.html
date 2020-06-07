@@ -2,33 +2,53 @@
 {% load bootstrap3 %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div id='zote' class="w3-container-fluid w3-light-grey">
-    <div class="w3-row">
-        <div class="col-md-5">
-        
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-md-7" style="padding-left: 14%">
-            <div class="panel panel-default w3-card">
-                <div class="panel-heading w3-theme-d3">
-                    <h3 class="text-center">Sign In</h3>
-                </div>
-                <div class="panel-body ">
-                    <form method="post">
-                        {% csrf_token %}
-                        {{ form|crispy}}
-                        <div class="form-group">
-                            <input type="submit" class="w3-button w3-theme-d4" value="Login">
-                        </div>
 
-                    </form>
-                </div>
-            </div>
-        </div>
+
+
+<video video autobuffer autoplay id="myVideo">
+  <source id="mp4" src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+<div class="w3-display-middle top">
+  <div class="panel panel-default w3-card">
+    <div class="panel-heading w3-theme-d3">
+      <h3 class="text-center">Sign In</h3>
     </div>
+    <div class="panel-body ">
+      <form method="post">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <div class="form-group">
+          <input type="submit" class="w3-button w3-theme-d4" value="Login">
+        </div>
+
+      </form>
+    </div>
+  </div>
 </div>
+<div class="content">
+  <h3>Heading</h3>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+
+</div>
+
+
+<script>
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+  
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+</script>
+
 
 {% endblock %}
