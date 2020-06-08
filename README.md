@@ -3,16 +3,18 @@
  <img src="./p.png">
 
 ## Description
-The app is a photo sharing app which allows users to assign filters to photos and share them with followers. ... Insta_Liters can sync their photo sharing to other social networks, so Instagram photos can be posted directly to Facebook, Tumblr, Twitter, Flickr, and Foursquare.. Visit the live site on
+At Moringa school you create a lot of projects (IPs, Mid-week projects) but you never know how those projects rate with your peers.
 ## User story
 
-As a user of the web application you will be able to:
+User stories
+As a user, I would like to:
 
-1. Sign up and log in
-2. View photos posted by other users
-3. Follow other users
-4. Comment on photos
-5. Edit your profile
+1. View posted projects and their details.
+2. Post a project to be rated/reviewed.
+3. Rate/ review other users' projects.
+4. Search for projects.
+5. View projects overall score.
+6. View my profile page.
 ## BDD
 
 | Behaviour | Input | Output |
