@@ -68,12 +68,13 @@ def upload_form(request):
 
 @login_required(login_url='/accounts/login')
 def edit_prof(request):
-    current_user = request.user
+    current_user = Profile.objects.get(user_id=request.user)
+  
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES)
         if form.is_valid():
             lol = form.save(commit=False)
-            lol.uploaded_by = current_user
+            lol.uploaded_by = request.user
             lol.save()
             return redirect('profile')
     else:
