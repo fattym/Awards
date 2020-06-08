@@ -6,12 +6,12 @@ class ProfileTestCase(TestCase):
     
     def setUp(self):
         self.new_user = User(username='deadpool', password='password')
-        self.new_profile = Profile(contact_email='contact@gmail.com', contact_number='0798734442', bio='Just a mere bio', profile_pic='/path/example.png', owner=self.new_user)
+        self.new_profile = Profile(contact_email='scarscoobydoo@gmail.com', contact_number='0798734442', bio='Just a mere bio', profile_pic='/path/example.png', owner=self.new_user)
         
     def tearDown(self):
         Profile.objects.all().delete()
         
-    def create_profile(self, contact_email='contact@gmail.com', contact_number=236, bio='Just a mere bio', profile_pic='/path/example.png'):
+    def create_profile(self, contact_email='scarscoobydoo@gmail.com', contact_number=236, bio='Just a mere bio', profile_pic='/path/example.png'):
         return Profile.objects.create(contact_email=contact_email, contact_number=contact_number, bio=bio, profile_pic=profile_pic)
     
     def test_profile_creation(self):
