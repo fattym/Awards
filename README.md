@@ -14,16 +14,17 @@ As a user of the web application you will be able to:
 4. Comment on photos
 5. Edit your profile
 ## BDD
-| Behavior            | Input                         | Output                        | 
-| ------------------- | ----------------------------- | ----------------------------- |
-| User visits the app and gets redirected to the login page  | User logs in | Directed to the home page where they see posted photos | 
-If user has no account, they click on `sign up` | User signs up | User is redirected to the log in page |
-|  Home page loads | Add comment  | Comment posted appears |
-|  Homepage loads | Click `profile` | User's profile appears | 
-| Homepage loads | Click `upload image` icon | User's redirected to a page where they can upload an image | 
-| Homepage loads | Click `settings` icon | A modal appears where one can change their password or logout | 
-| Homepage loads | User inputs in the search form and presses enter | Searched results show |
-| A list of users displays | Click `follow` button to follow | Reloaded to the homepage
+
+| Behaviour | Input | Output |
+| --------- | ------| ------ |
+|On loading the app you see the landing page with login up form with a register link at the bottom of the form.| Clicking `sign up`.| You are redirected to a page where you enter your details and sign up then redirected to the login page.|
+|Enter your username and password on the login page.| Clicking `login`. |You are redirected to a page where all the projects are visible.|
+|Clicking any project's landing_page.|Mouse click.|You are redirected to a page showing just the project you clicked.|
+|Clicking `RATE PROJECT` button.|Mouse click.|You are redirected to a page with a from where you fill your ratings under **content**, **design** and **usability** in the range of 1 to 10. |
+|Clicking `VISIT SITE` button.|Mouse click.|You are redirected to the project's website.|
+|Clicking the `New Project` link on the navbar. | Mouse click. |You are redirected to a page where you enter the details of your project then post.|
+|Clicking the `Profile` link on the navbar.| Mouse click. | You are redirected to a page where you can view your profile or create your profile if you didn't have any.|
+|||
 
 ## Setup and Installation  
 To get the project .......  
