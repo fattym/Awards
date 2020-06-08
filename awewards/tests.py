@@ -34,7 +34,7 @@ class ProfileTestCase(TestCase):
     def test_update_profile(self):
         self.new_user.save()
         self.new_profile.save_profile()
-        self.new_profile.update_profile(contact_email='scarscoobydoo@gmail.com', contact_number=247, bio='Just a bio update', profile_pic='/path/example2.png')
+        self.new_profile.update_profile(contact_email='scarscoobydoo@gmail.com', bio='Just a bio update', profile_pic='/path/example2.png')
         self.assertTrue(self.new_profile.contact_email == 'scarscoobydoo@gmail.com')
         self.assertTrue(self.new_profile.contact_number == 247)
         self.assertTrue(self.new_profile.bio == 'Just a bio update')
@@ -55,7 +55,7 @@ class ProjectTestCase(TestCase):
         self.new_project = Project( description='Just a mere description', link='https://example.com/', owner=self.new_user)
         
         
-    def create_project(self,  description='Just a mere description', link='https://example.com/', landing_page='/path/example.png'):
+    def create_project(self,  description='Just a mere description', link='https://example.com/', rating):
         return Project.objects.create(title=title, description=description, link=link, landing_page=landing_page)
     
     def tearDown(self):
@@ -103,7 +103,7 @@ class RateTestCase(TestCase):
         self.new_project = Project( description='Just a mere description', link='https://example.com/', owner=self.new_user)
         self.new_rate = Rate(usability=2, design=4, content=6, owner=self.new_user)
         
-    def create_rate(self,  description='Just a mere description', link='https://example.com/', landing_page='/path/example.png'):
+    def create_rate(self,  description='Just a mere description', link='https://example.com/', rating):
         return Rate.objects.create(design=2, usability=5, content=6)
     
     def tearDown(self):
