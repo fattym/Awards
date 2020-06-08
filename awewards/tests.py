@@ -34,8 +34,8 @@ class ProfileTestCase(TestCase):
     def test_update_profile(self):
         self.new_user.save()
         self.new_profile.save_profile()
-        self.new_profile.update_profile(contact_email='new_email@gmail.com', contact_number=247, bio='Just a bio update', profile_pic='/path/example2.png')
-        self.assertTrue(self.new_profile.contact_email == 'new_email@gmail.com')
+        self.new_profile.update_profile(contact_email='scarscoobydoo@gmail.com', contact_number=247, bio='Just a bio update', profile_pic='/path/example2.png')
+        self.assertTrue(self.new_profile.contact_email == 'scarscoobydoo@gmail.com')
         self.assertTrue(self.new_profile.contact_number == 247)
         self.assertTrue(self.new_profile.bio == 'Just a bio update')
         self.assertTrue(self.new_profile.profile_pic == '/path/example2.png')
