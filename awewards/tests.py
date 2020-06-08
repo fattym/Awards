@@ -52,10 +52,10 @@ class ProjectTestCase(TestCase):
     
     def setUp(self):
         self.new_user = User(username='scar', password='password')
-        self.new_project = Project(title='Just a title', description='Just a mere description', link='https://example.com/', owner=self.new_user)
+        self.new_project = Project( description='Just a mere description', link='https://example.com/', owner=self.new_user)
         
         
-    def create_project(self, title='Just a title', description='Just a mere description', link='https://example.com/', landing_page='/path/example.png'):
+    def create_project(self,  description='Just a mere description', link='https://example.com/', landing_page='/path/example.png'):
         return Project.objects.create(title=title, description=description, link=link, landing_page=landing_page)
     
     def tearDown(self):
@@ -100,10 +100,10 @@ class RateTestCase(TestCase):
     
     def setUp(self):
         self.new_user = User(username='scar', password='password')
-        self.new_project = Project(title='Just a title', description='Just a mere description', link='https://example.com/', owner=self.new_user)
+        self.new_project = Project( description='Just a mere description', link='https://example.com/', owner=self.new_user)
         self.new_rate = Rate(usability=2, design=4, content=6, owner=self.new_user)
         
-    def create_rate(self, title='Just a title', description='Just a mere description', link='https://example.com/', landing_page='/path/example.png'):
+    def create_rate(self,  description='Just a mere description', link='https://example.com/', landing_page='/path/example.png'):
         return Rate.objects.create(design=2, usability=5, content=6)
     
     def tearDown(self):
