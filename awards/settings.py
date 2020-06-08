@@ -11,9 +11,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import django_heroku
-
-
 import cloudinary
 
 
@@ -164,11 +161,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #configure django app for heroku
 LOGIN_REDIRECT_URL = 'home'
 STAR_RATINGS_RANGE = 10
-django_heroku.settings(locals())
 
-#Email configurations remember to install python-decouple
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jnganga288@gmail.com'
-EMAIL_HOST_PASSWORD = 'Kenyacom25'
+
