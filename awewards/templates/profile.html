@@ -23,7 +23,7 @@
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
   <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
+  <nav class="w3-sidebar w3-collapse w3-black w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
     <div class="w3-container">
       <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
         title="close menu">
@@ -40,7 +40,7 @@
         {% endif %}
       </div>
 
-      <p class="w3-text-grey w3-center"> Logged in as <a id='zae' style='font-size: 18px;'
+      <p class="w3-text-grey w3-center"> Logged in as <a id='zae'  style='font-size: 18px;'
           href="{%url 'profile'%}"><span id='spaner'>{{user.username}}</span></a></p>
       {% if my_profile.bio %}
       <p>{{ my_profile.bio }}</p>
@@ -51,7 +51,7 @@
 
     </div>
     <div class="w3-bar-block">
-      <a href="{%url 'home'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-green"><i
+      <a href="{%url 'home'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i
           class="fa fa-home fa-fw w3-margin-right"></i>Home</a>
       <a href="{%url 'profile'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
           class="fa fa-user fa-fw w3-margin-right"></i>Profile</a>
@@ -81,8 +81,8 @@
     <div class="w3-row-padding">
       <h5 class="w3-center">My Projects</h5>
       <div class="w3-center">
-        <a class="w3-button w3-round w3-green" href="{%url 'post'%}" style="margin-right: 12px;"><b>+ </b>Add a Project</a>
-        <a class="w3-button w3-round w3-green" href="{%url 'edit'%}"><b>- </b>Edit Profile <b> -</b></a>
+        <a class="w3-button w3-round w3-brown" href="{%url 'post'%}" style="margin-right: 12px;"><b>+ </b>Add a Project</a>
+        <a class="w3-button w3-round w3-brown" href="{%url 'edit'%}"><b>- </b>Edit Profile <b> -</b></a>
       </div><br>
       {%for project in my_projects%}
       <div class="w3-third w3-container w3-margin-bottom ">
@@ -118,7 +118,7 @@
   <style>
     #zae {
       text-decoration: none !important;
-      color: #4CAF50 !important;
+      color:yellow !important;
     }
   </style>
 
