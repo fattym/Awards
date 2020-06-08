@@ -5,7 +5,7 @@ from .models import *
 class ProfileTestCase(TestCase):
     
     def setUp(self):
-        self.new_user = User(username='deadpool', password='password')
+        self.new_user = User(username='scar', password='password')
         self.new_profile = Profile(contact_email='scarscoobydoo@gmail.com', contact_number='0798734442', bio='Just a mere bio', profile_pic='/path/example.png', owner=self.new_user)
         
     def tearDown(self):
@@ -51,7 +51,7 @@ class ProfileTestCase(TestCase):
 class ProjectTestCase(TestCase):
     
     def setUp(self):
-        self.new_user = User(username='deadpool', password='password')
+        self.new_user = User(username='scar', password='password')
         self.new_project = Project(title='Just a title', description='Just a mere description', link='https://example.com/', owner=self.new_user)
         
         
@@ -99,7 +99,7 @@ class ProjectTestCase(TestCase):
 class RateTestCase(TestCase):
     
     def setUp(self):
-        self.new_user = User(username='deadpool', password='password')
+        self.new_user = User(username='scar', password='password')
         self.new_project = Project(title='Just a title', description='Just a mere description', link='https://example.com/', owner=self.new_user)
         self.new_rate = Rate(usability=2, design=4, content=6, owner=self.new_user)
         
